@@ -7,7 +7,7 @@ A Progressive Web App (PWA) that displays a daily countdown calendar from **01 J
 - 📱 Install as native app on any device
 - 🌙 Dark mode support
 - 📊 Progress tracking
-- 🗓️ Interactive calendar
+- 📅 Interactive calendar
 - ⚙️ Customizable settings
 - 💾 Offline support
 
@@ -53,9 +53,9 @@ A Progressive Web App (PWA) that displays a daily countdown calendar from **01 J
 
 ### Android (APK)
 1. Use PWA builders like:
-   - **Paw** (https://paw.cloud/)
-   - **BubbleWrap** (https://github.com/GoogleChromeLabs/bubblewrap)
    - **PWABuilder** (https://www.pwabuilder.com/)
+   - **BubbleWrap** (https://github.com/GoogleChromeLabs/bubblewrap)
+   - **Paw** (https://paw.cloud/)
 
 2. Steps:
    ```bash
@@ -78,6 +78,8 @@ A Progressive Web App (PWA) that displays a daily countdown calendar from **01 J
 ├── browserconfig.xml          # Windows tiles config
 ├── sitemap.xml               # SEO sitemap
 ├── robots.txt                # Bot instructions
+├── README.md                 # This file
+├── BUILD.md                  # Build instructions
 ├── css/
 │   └── styles.css            # All styling
 ├── js/
