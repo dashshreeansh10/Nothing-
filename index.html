@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="description" content="Daily Countdown Calendar with Motivational Quotes and Notifications from 01 JAN 2026 to 01 MAY 2027">
+    <meta name="theme-color" content="#1a73e8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Countdown Calendar">
+    <meta name="msapplication-TileColor" content="#1a73e8">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Countdown Calendar">
+    
+    <title>Countdown Calendar - Daily Motivation</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/icon-512x512.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">📅 Countdown Calendar</h1>
+                <p class="subtitle">01 JAN 2026 → 01 MAY 2027</p>
+            </div>
+            <button class="install-btn" id="installBtn" style="display: none;">
+                ⬇️ Install App
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Daily Info Card -->
+            <section class="daily-card">
+                <div class="card-header">
+                    <h2>Today's Date</h2>
+                    <button class="notification-btn" id="notificationBtn" title="Enable Notifications">
+                        🔔
+                    </button>
+                </div>
+                
+                <div class="date-info">
+                    <div class="current-date">
+                        <span id="todayDate">--</span>
+                    </div>
+                    <div class="countdown-stats">
+                        <div class="stat">
+                            <span class="stat-label">Days Passed</span>
+                            <span class="stat-value" id="daysPassed">0</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Days Remaining</span>
+                            <span class="stat-value" id="daysRemaining">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">0% Complete</p>
+                </div>
+
+                <!-- Motivational Quote -->
+                <div class="quote-container">
+                    <p class="quote" id="dailyQuote">"Stay focused and keep moving forward!"</p>
+                    <p class="quote-author" id="quoteAuthor">- Motivation Daily</p>
+                </div>
+            </section>
+
+            <!-- Calendar Preview -->
+            <section class="calendar-section">
+                <h2>Calendar</h2>
+                <div class="calendar-wrapper">
+                    <div class="calendar-nav">
+                        <button id="prevMonth" class="nav-btn">← Prev</button>
+                        <h3 id="currentMonth">January 2026</h3>
+                        <button id="nextMonth" class="nav-btn">Next →</button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid"></div>
+                </div>
+            </section>
+
+            <!-- Statistics Section -->
+            <section class="stats-section">
+                <h2>Journey Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-icon">📊</span>
+                        <span class="stat-name">Total Days</span>
+                        <span class="stat-number" id="totalDays">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">✅</span>
+                        <span class="stat-name">Progress</span>
+                        <span class="stat-number" id="progressPercent">0%</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-icon">📅</span>
+                        <span class="stat-name">Current Month</span>
+                        <span class="stat-number" id="currentMonthName">--</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="settings-section">
+                <h2>Settings</h2>
+                <div class="settings-group">
+                    <label class="setting-item">
+                        <input type="checkbox" id="dailyNotification" checked>
+                        <span>Daily Notification at 9:00 AM</span>
+                    </label>
+                    <label class="setting-item">
+                        <input type="checkbox" id="darkMode">
+                        <span>Dark Mode</span>
+                    </label>
+                    <label class="setting-item">
+                        <input type="checkbox" id="soundEnabled" checked>
+                        <span>Enable Sound</span>
+                    </label>
+                </div>
+                <button class="btn-primary" id="clearDataBtn">Clear All Data</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with ❤️ | Countdown Calendar PWA v1.0</p>
+            <p class="footer-note">Works offline • Notifications enabled • Install as app</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/pwa.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
